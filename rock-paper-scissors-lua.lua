@@ -10,7 +10,7 @@ function wait(seconds) --function that adds a wait() function similar to the one
 end
 
 function game() --the entirety of the game is in a function so it can easily be called if the player wants to play again
-
+--- GAME PREP ---
     for i = 1,30 do -- clear out last game
     print(                            )
 
@@ -19,16 +19,22 @@ function game() --the entirety of the game is in a function so it can easily be 
     print("The current score is "..plrScore.."-"..comScore)--print score
     for i = 1,5 do
         print(                            ) --add spacing so everything that was printed isn't so cluttered
-        end --game starting stuff
-    io.write("What do you play? Rock, paper, or scissors? ")
-    local choice = string.lower(io.read())--listen for player's input
+        end 
+
+
+
+    io.write("What do you play? Rock, paper, or scissors? ") --ask the player what they want to play
+    local choice = string.lower(io.read())--listen for player's input and convert it into lowercase
 
     local comChoice --establish the variable for the program's choice
+----------------------
+
 if choice == "rock" or choice == "paper" or choice == "scissors" then --gotta make sure that the player actually put in rock, paper or scissors
+    ---START GAME!---
     for i = 1,5 do
         print(                            )--add spacing so everything that was printed isn't so cluttered
         end
-    print("Rock, paper, scissors, LUA!") 
+    print("Rock, paper, scissors, LUA!") --print message to start off game
     wait(1)
     for i = 1,5 do
         print(                            )--add spacing so everything that was printed isn't so cluttered
@@ -78,6 +84,7 @@ if choice == "rock" or choice == "paper" or choice == "scissors" then --gotta ma
         comScore = comScore + 1 --update program's score
                     end        
         Game = Game + 1 --update game number
+    --------
     else
         print("You can't play "..choice..", silly!") --tell the player that they can't play whatever isn't a rock, a piece of paper, or scissors
     end
@@ -98,7 +105,7 @@ if End == true then
         print(                            ) --add spacing so everything that was printed isn't so cluttered
         end
     io.write("Do you want to play again? (y/n) ")-- ask player if they want to play again
-        local yN = string.lower(io.read())
+        local yN = string.lower(io.read()) -- listen for player's input and convert it into lowercase
         if yN == "y" then 
     game() -- restart game
         else
