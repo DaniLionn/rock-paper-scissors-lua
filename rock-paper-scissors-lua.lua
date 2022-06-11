@@ -80,6 +80,7 @@ if choice == "rock" or choice == "paper" or choice == "scissors" then
     else
         print("You can't play "..choice..", silly!")
     end
+wait(1)
     End = true
 end
 
