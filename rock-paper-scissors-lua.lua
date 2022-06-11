@@ -1,8 +1,9 @@
-
+--- VARIABLES ---
 local End = false --basically a debounce thing
 local plrScore = 0 --score for the player
 local comScore = 0 --score for the program
 local Game = 1 --game number
+----------------------
 
 function wait(seconds) --function that adds a wait() function similar to the one in Roblox's Lua
     local start = os.time()
@@ -30,7 +31,7 @@ function game() --the entirety of the game is in a function so it can easily be 
 ----------------------
 
 if choice == "rock" or choice == "paper" or choice == "scissors" then --gotta make sure that the player actually put in rock, paper or scissors
-    ---START GAME!---
+    --- START GAME! ---
     for i = 1,5 do
         print(                            )--add spacing so everything that was printed isn't so cluttered
         end
@@ -84,7 +85,7 @@ if choice == "rock" or choice == "paper" or choice == "scissors" then --gotta ma
         comScore = comScore + 1 --update program's score
                     end        
         Game = Game + 1 --update game number
-    --------
+  ----------------------
     else
         print("You can't play "..choice..", silly!") --tell the player that they can't play whatever isn't a rock, a piece of paper, or scissors
     end
