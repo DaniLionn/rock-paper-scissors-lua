@@ -101,6 +101,7 @@ if End == true then
     game()
         else
             print("Thanks for playing!")
+            wait(2)
         break
 end
 end 
